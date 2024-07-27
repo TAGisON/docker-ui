@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Reset and Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif; /* Global font setting */
+}
+
+/* Home, Reports, Products, Team Styles */
+.home,
+.reports,
+.products,
+.team,
+.reports {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+/* App Layout Styles */
+.App {
+  display: flex;
+}
+
+/* Sidebar Styles */
+.Sidebar {
+  width: 250px; /* Width of the sidebar */
+  height: 100vh; /* Full viewport height */
+  background-color: #333; /* Sidebar background color */
+  color: #fff; /* Sidebar text color */
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* Fixes the sidebar position */
+}
+
+.Sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Sidebar ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.Sidebar ul li a {
+  color: #fff; /* Link text color */
+  text-decoration: none; /* Removes underline from links */
+  display: block;
+}
+
+.Sidebar ul li a:hover {
+  background-color: #575757; /* Background color on hover */
+}
+
+/* Content Area Styles */
+.content {
+  flex: 1;
+  padding: 20px; /* Padding around content */
+  margin-left: 250px; /* Space to the right of the sidebar */
+  width: calc(100% - 250px); /* Adjust width based on the sidebar */
+}
+
+/* Header Styles */
+.header {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.header p {
+  text-align: right;
+  margin: 0;
+  font-size: 1.0rem;
+  font-weight: bold;
+}
+
+/* Card Styles */
+.card {
+  background-color: white;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Padding inside cards */
+  margin: 20px; /* Margin around cards */
+  width: 100%; /* Full width */
+  display: block; /* Stack cards vertically */
+}
+
+.card-container {
+  display: block; /* Stack cards vertically */
+}
+
+.card h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+/* Table Styles */
+.card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.card table th,
+.card table td {
+  border: 1px solid #ddd; /* Border around table cells */
+  padding: 8px;
+  text-align: left;
+}
+
+.card table th {
+  background-color: #f2f2f2; /* Header background color */
+}
+
+.card table td.status-running {
+  color: green; /* Running status text color */
+}
+
+.card table td.status-stopped,
+.card table td.status-exited {
+  color: red; /* Stopped/Exited status text color */
+}
+
+/* Switch Container Styles */
+.card .switch-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Additional Styling */
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+/* Table Container Styles */
+.table-container {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.table-container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-container table th,
+.table-container table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-container table th {
+  background-color: #f2f2f2;
+}
+
+.table-container table td.status-running {
+  color: green;
+}
+
+.table-container table td.status-stopped,
+.table-container table td.status-exited {
+  color: red;
+}
+
+.card .switch-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .Sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .Sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Sidebar ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
